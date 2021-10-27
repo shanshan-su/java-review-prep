@@ -19,8 +19,7 @@ public class StringExercise {
 
         String myString;
 
-        myString = "We don't need no education\n" +
-                "We don't need no thought control";
+        myString = "We don't need no education\nWe don't need no thought control";
         System.out.println(myString + "\n");
 
         myString = "Check \"this\" out!, \"s inside of \"s!";
@@ -29,8 +28,7 @@ public class StringExercise {
         myString = "In windows, the main drive is usually C:\\";
         System.out.println(myString + "\n");
 
-        myString = "I can do backslashes \\, double backslashes \\\\,\n" +
-                "and the amazing triple backslash \\\\\\!";
+        myString = "I can do backslashes \\, double backslashes \\\\,\nand the amazing triple backslash \\\\\\!";
         System.out.println(myString + "\n");
     }
 }

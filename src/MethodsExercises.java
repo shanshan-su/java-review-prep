@@ -125,9 +125,13 @@ public class MethodsExercises {
             }
 
             long factorial = 1;
-            String middle = "1";
+            String middle = "";
             for (int i = 1; i <= userInput; i++) {
-                middle += " x " + i;
+                if (i == 1) {
+                    middle += i;
+                } else {
+                    middle += " x " + i;
+                }
                 factorial *= i;
                 System.out.printf("%2d! = %-45s = %d%n", i, middle, factorial);
             }
@@ -167,9 +171,14 @@ public class MethodsExercises {
             }
 
             long factorial = 1;
-            String middle = "1";
+            String middle = "";
+
             for (int i = 1; i <= userInput; i++) {
-                middle += " x " + i;
+                if (i == 1) {
+                    middle += i;
+                } else {
+                    middle += " x " + i;
+                }
                 factorial = calculateFactorial(i);
                 System.out.printf("%2d! = %-55s = %d%n", i, middle, factorial);
             }
@@ -224,10 +233,10 @@ public class MethodsExercises {
 //        System.out.println("Enter a number between 1 and 10: ");
 //        int userInput = getInteger(1, 10);
 
-//        getFactorial();
+        getFactorial();
 //        getFactorialRecursion();
 
-        rollDice();
+//        rollDice();
     }
 
 

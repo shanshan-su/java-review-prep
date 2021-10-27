@@ -35,5 +35,6 @@ public class Bob {
             keepTalking = scanner.nextLine().equalsIgnoreCase("y");
         } while (keepTalking);
 
+        scanner.close();
     }
 }
