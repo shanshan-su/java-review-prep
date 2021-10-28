@@ -20,21 +20,20 @@ public class Input {
     }
 
     public boolean yesNo() {
-        String isContinue = scanner.nextLine();
+        String isContinue = getString();
         return isContinue.equalsIgnoreCase("y") || isContinue.equalsIgnoreCase("yes");
     }
 
     public boolean yesNo(String prompt) {
         System.out.println(prompt);
-        String isContinue = scanner.nextLine();
-        return isContinue.equalsIgnoreCase("y") || isContinue.equalsIgnoreCase("yes");
+        return yesNo();
     }
 
     public int getInt(int min, int max) {
         int userInput;
         do {
             System.out.printf("Please enter a whole number between %d and %d: %n", min, max);
-            userInput = scanner.nextInt();
+            userInput = getInt();
         } while (userInput < min || userInput > max);
 
         return userInput;
@@ -44,27 +43,26 @@ public class Input {
         int userInput;
         do {
             System.out.println(prompt);
-            userInput = scanner.nextInt();
+            userInput = getInt();
         } while (userInput < min || userInput > max);
 
         return userInput;
     }
 
     public int getInt() {
-        System.out.println("Please enter a whole number.");
-        return scanner.nextInt();
+        return Integer.parseInt(getString());
     }
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        return scanner.nextInt();
+        return getInt();
     }
 
     public double getDouble(double min, double max) {
         double userInput;
         do {
-            System.out.printf("Please enter a whole number between %f and %f: %n", min, max);
-            userInput = scanner.nextInt();
+            System.out.printf("Please enter a decimal number between %f and %f: %n", min, max);
+            userInput = Double.parseDouble(getString());
         } while (userInput < min || userInput > max);
 
         return userInput;
@@ -74,7 +72,7 @@ public class Input {
         double userInput;
         do {
             System.out.println(prompt);
-            userInput = scanner.nextInt();
+            userInput = Double.parseDouble(getString());
         } while (userInput < min || userInput > max);
 
         return userInput;
@@ -82,11 +80,11 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Please enter a decimal number.");
-        return scanner.nextDouble();
+        return Double.parseDouble(getString());
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        return scanner.nextDouble();
+        return Double.parseDouble(getString());
     }
 }
