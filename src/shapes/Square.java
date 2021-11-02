@@ -14,6 +14,7 @@ public class Square extends Rectangle {
         return 4 * side;
     }
 
+    @Override
     public double getArea() {
         System.out.println("Square getArea method:");
         return side * side;
